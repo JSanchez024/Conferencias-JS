@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.menu-redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+
+    &__ocultar{
+        display: none;
+    }
+    
+    @include m.tablet{
+        justify-content: flex-end;
+    }
+    
+}

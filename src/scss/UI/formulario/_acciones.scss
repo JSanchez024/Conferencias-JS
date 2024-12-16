@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-between;
 
+    &--centrar{
+        justify-content: center;
+    }
+
     &__enlace{
         color: v.$negro;
         font-size: 1.4rem;
