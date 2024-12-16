@@ -7,7 +7,7 @@
             <label for="email" class="formulario__label">Email</label>
             <input 
                 type="email"
-                class="formulario__label"
+                class="formulario__input"
                 placeholder="Tu Email"
                 id="email"
                 name="email"
@@ -15,10 +15,10 @@
         </div>
 
         <div class="formulario__campo">
-            <label for="password" class="formulario__label">Email</label>
+            <label for="password" class="formulario__label">Password</label>
             <input 
                 type="password"
-                class="formulario__label"
+                class="formulario__input"
                 placeholder="Tu Password"
                 id="password"
                 name="password"
