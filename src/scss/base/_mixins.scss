@@ -48,11 +48,30 @@
 }
 
 @mixin contenedor{
-    max-width: min(95%, 120rem);
+    max-width: min(95%, 140rem);
     margin: 0 auto;
 }
 
 @mixin contenedor-sm{
-    max-width: min(95%, 60rem);
+    width: min(95%, 60rem);
     margin: 0 auto;
+}
+
+@mixin headings{
+    font-family: v.$fuente_principal;
+    font-weight: v.$black;
+    margin: 2rem 0;
+}
+@mixin nombre-pagina{
+    @include headings;
+    margin: 6rem 0 3rem 0;
+    text-align: center;
+}
+@mixin texto-fluido($min, $max){
+    font-size: clamp($min, -0.8rem + 10vw ,$max);
+}
+@mixin texto-degradado($inicio, $final){
+    background: linear-gradient(to right, $inicio, $final);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
