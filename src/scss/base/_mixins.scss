@@ -74,6 +74,7 @@
     background: linear-gradient(to right, $inicio, $final);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+<<<<<<< HEAD
 }
 @mixin logo{
     color: v.$blanco;
@@ -103,3 +104,6 @@
       display: none;
     }
 }
+=======
+}
+>>>>>>> c8439cb4129c9dac12c1c6c1f1bc9a783d21830e

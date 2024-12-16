@@ -370,6 +370,7 @@ h3 {
   font-size: 2rem;
 }
 
+<<<<<<< HEAD
 .footer {
   background-color: #007df4;
   margin-top: 5rem;
@@ -420,6 +421,8 @@ h3 {
   font-weight: 400;
 }
 
+=======
+>>>>>>> c8439cb4129c9dac12c1c6c1f1bc9a783d21830e
 .formulario {
   display: flex;
   flex-direction: column;
@@ -465,9 +468,12 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 .acciones--centrar {
   justify-content: center;
 }
+=======
+>>>>>>> c8439cb4129c9dac12c1c6c1f1bc9a783d21830e
 .acciones__enlace {
   color: #1a1b15;
   font-size: 1.4rem;
@@ -566,6 +572,7 @@ h3 {
     width: auto;
   }
 }
+<<<<<<< HEAD
 
 .barra {
   background-color: #007df4;
@@ -650,4 +657,6 @@ h3 {
   border-left: 0.5rem solid #02db02;
   color: rgb(1.0769230769, 117.9230769231, 1.0769230769);
 }
+=======
+>>>>>>> c8439cb4129c9dac12c1c6c1f1bc9a783d21830e
 /*# sourceMappingURL=app.css.map */
