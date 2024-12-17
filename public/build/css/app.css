@@ -304,6 +304,7 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -424,6 +425,16 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.formulario__fieldset {
+  border: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+.formulario__legend {
+  color: #64748B;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
 .formulario__campo {
   display: flex;
   flex-direction: column;
@@ -439,6 +450,9 @@ h3 {
   padding: 1rem;
   border: 1px solid rgb(176.6, 199, 221.4);
   border-radius: 0.5rem;
+}
+.formulario__input--file {
+  border: none;
 }
 .formulario__submit {
   background-color: #007df4;
@@ -458,6 +472,9 @@ h3 {
 .formulario__submit:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
+}
+.formulario__submit--registrar {
+  width: 100%;
 }
 
 .acciones {
@@ -497,6 +514,7 @@ h3 {
   }
 }
 .header__enlace {
+  all: unset;
   color: #FFFFFF;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -504,6 +522,7 @@ h3 {
 }
 .header__enlace:hover {
   color: #007df4;
+  cursor: pointer;
 }
 .header__contenido {
   padding-top: 10rem;
@@ -649,5 +668,142 @@ h3 {
   background-color: rgb(170.7692307692, 254.2307692308, 170.7692307692);
   border-left: 0.5rem solid #02db02;
   color: rgb(1.0769230769, 117.9230769231, 1.0769230769);
+}
+
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F8FAFC;
+}
+.dashboard__header {
+  background-color: #1E293B;
+  padding: 2rem;
+  justify-content: space-between;
+}
+.dashboard__header-grid {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .dashboard__header-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.dashboard__logo {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, -0.8rem + 10vw, 3rem);
+}
+@media (min-width: 1024px) {
+  .dashboard__logo {
+    text-align: left;
+    margin: 0;
+  }
+}
+.dashboard__form {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard__submit--logout {
+  all: unset;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.dashboard__submit--logout:hover {
+  color: #007df4;
+  cursor: pointer;
+}
+.dashboard__grid {
+  display: flex;
+  flex: 1;
+}
+.dashboard__sidebar {
+  background-color: rgb(47.191011236, 64.4943820225, 92.808988764);
+  width: 12rem;
+}
+.dashboard__menu {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.dashboard__enlace {
+  color: rgb(111.1460674157, 137.9662921348, 181.8539325843);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  transition: 300ms background-color ease-in-out, 300ms color ease, 300ms border-radius ease;
+}
+.dashboard__enlace:hover, .dashboard__enlace--actual {
+  background-color: rgb(64.3820224719, 87.9887640449, 126.6179775281);
+  color: #FFFFFF;
+  border-radius: 1rem;
+}
+.dashboard__icono {
+  font-size: 2rem;
+}
+.dashboard__menu-texto {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.dashboard__contenido {
+  width: 100%;
+  padding: 1rem 1rem 3rem 1rem;
+}
+@media (min-width: 768px) {
+  .dashboard__contenido {
+    padding: 1rem 5rem 3rem 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .dashboard__contenedor-boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+  }
+}
+.dashboard__boton {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.dashboard__boton:hover {
+  background-color: rgb(0, 98.8729508197, 193);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .dashboard__boton {
+    width: auto;
+  }
+}
+.dashboard__contenedor, .dashboard__formulario {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 5rem;
+}
+.dashboard__formulario {
+  width: min(95%, 80rem);
+  margin: 0 auto;
 }
 /*# sourceMappingURL=app.css.map */
