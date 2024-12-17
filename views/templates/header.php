@@ -1,11 +1,8 @@
 <header class="header">
     <div class="header__contenedor">
         <nav class="header__navegacion">
-<<<<<<< HEAD
             <a href="/registro" class="header__enlace">Registro</a>
-=======
             <a href="/regitro" class="header__enlace">Registro</a>
->>>>>>> c8439cb4129c9dac12c1c6c1f1bc9a783d21830e
             <a href="/login" class="header__enlace">Iniciar Sesion</a>
         </nav>
 
@@ -22,7 +19,6 @@
             <a href="/registro" class="header__boton">Comprar Pase</a>
         </div>
     </div>
-<<<<<<< HEAD
 </header>
 <div class="barra">
     <div class="barra__contenido">
@@ -39,6 +35,4 @@
         </nav>
     </div>
 </div>
-=======
 </header>
->>>>>>> c8439cb4129c9dac12c1c6c1f1bc9a783d21830e
