@@ -52,7 +52,12 @@ class Paginacion{
     public function numeros_paginas(){
         $html = '';
         for($i = 1; $i <= $this->total_paginas(); $i++){
-            $html .= "<a class=\" \" href=\"?page={$i} \">{$i}</a>";
+           if($i === $this->pagina_actual){
+                $html .= "<span class=\"paginacion__enlace paginacion__enlace--actual \">{$i}</span>";
+           }else{
+               $html .= "<a class=\"paginacion__enlace paginacion__enlace--numero\" href=\"?page={$i} \">{$i}</a>";
+           }
+                      
         }
         return $html;
     }
