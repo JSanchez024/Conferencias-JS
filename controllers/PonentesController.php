@@ -180,11 +180,11 @@ class PonentesController {
     }
 
     public static function eliminar(){
-        //Proteger Panel
-        if(!is_admin()){
-            header('location: /login');
-        }
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            //Proteger Panel
+            if(!is_admin()){
+                header('location: /login');
+            }
 
             $carpeta_imagenes = '../public/img/speakers';
 

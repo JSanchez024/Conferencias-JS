@@ -13,6 +13,11 @@ use Model\Ponente;
 class EventosController {
 
     public static function index(Router $router){
+        //Proteger Panel
+        if(!is_admin()){
+            header('location: /login');
+        }
+
         $pagina_actual = $_GET['page'];
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
 
@@ -34,7 +39,6 @@ class EventosController {
             $evento->ponente = Ponente::find($evento->ponente_id); 
         }
 
-
         $router->render('admin/eventos/index',[
             'titulo' => 'Conferencias y Workshops',
             'eventos' => $eventos,
@@ -43,15 +47,22 @@ class EventosController {
     }
 
     public static function crear(Router $router){
+        //Proteger Panel
+        if(!is_admin()){
+            header('location: /login');
+        }
 
         $alertas = [];
         $categorias = Categoria::all('ASC');
         $dias = Dia::all('ASC');
         $horas = Hora::all('ASC');
-
         $evento = new Evento;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            //Proteger Panel
+            if(!is_admin()){
+                header('location: /login');
+            }
             
             $evento->sincronizar($_POST);
             $alertas = $evento->validar();
@@ -75,8 +86,11 @@ class EventosController {
         ]);
     }
 
-
     public static function editar(Router $router){
+        //Proteger Panel
+        if(!is_admin()){
+            header('location: /login');
+        }
 
         $alertas = [];
 
@@ -97,6 +111,10 @@ class EventosController {
         }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            //Proteger Panel
+            if(!is_admin()){
+                header('location: /login');
+            }
             
             $evento->sincronizar($_POST);
             $alertas = $evento->validar();
@@ -120,5 +138,23 @@ class EventosController {
         ]);
     }
 
+    public static function eliminar(){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            //Proteger Panel
+            if(!is_admin()){
+                header('location: /login');
+            }
+            $id = $_POST['id'];
+            $evento = Evento::find($id);
 
+            if(!isset($evento)){
+                header('location: /admin/eventos');
+            }
+            $resultado = $evento->eliminar();
+            if($resultado){
+                header('location: /admin/eventos');
+            }
+
+        }
+    }
 }

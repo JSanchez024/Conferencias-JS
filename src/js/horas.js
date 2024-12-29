@@ -25,11 +25,9 @@
                 const horaSeleccionada = document.querySelector(`[data-hora-id="${id}"]`)
                 
                 horaSeleccionada.classList.remove('horas__hora--deshabilitada')
-                //horaSeleccionada.classList.add('horas__hora--seleccionada')
+                horaSeleccionada.classList.add('horas__hora--seleccionada')
 
-                //horaSeleccionada.onclick = seleccionarHora;
-
-                
+                horaSeleccionada.onclick = seleccionarHora;
             })()
         }
 
