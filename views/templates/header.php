@@ -4,7 +4,7 @@
 
         <?php if(is_auth()) { ?>
             <a href="<?php echo is_admin() ? '/admin/dashboard' : '/finalizar-registro'; ?>" class="header__enlace">Administrar</a>
-            <form method="POST" action="/logout" class="header__form">
+            <form method="POST" action="/login" class="header__form">
                 <input
                     type="submit"
                     value="Cerrar Sesion"
@@ -26,7 +26,7 @@
             </a>
 
             <p class="header__texto">Noviembre - 5 - 2050</p>
-            <p class="header__texto header__texto--modalidad">En Linea - Preencial</p>
+            <p class="header__texto header__texto--modalidad">En Linea - Precencial</p>
 
             <a href="/registro" class="header__boton">Comprar Pase</a>
         </div>

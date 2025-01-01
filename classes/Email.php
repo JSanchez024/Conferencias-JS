@@ -45,7 +45,6 @@ class Email {
 
          //Enviar el mail
          $mail->send();
-
     }
 
     public function enviarInstrucciones() {

@@ -9,6 +9,7 @@
 
     &__header{
         background-color: v.$gris-oscuro;
+        //background-color: aqua;
         padding: 2rem;
         justify-content: space-between;
         
@@ -26,9 +27,12 @@
         @include m.logo;
         @include m.texto-fluido(2rem, 3rem);
     }
-    //&__nav{
+    &__nav{
+    display: flex;
+    justify-content: right;
+    
 
-    //}
+    }
     &__form{
         display: flex;
         justify-content: space-between;

@@ -11,7 +11,7 @@
                     type="submit"
                     value="Cerrar Sesion"
                     class="dashboard__submit--logout"
-            >
+                >
             </form>
         </nav>
     </div>
