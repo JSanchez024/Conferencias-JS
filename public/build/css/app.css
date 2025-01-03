@@ -1590,6 +1590,59 @@ h3 {
   color: #FFFFFF;
 }
 
+.bloques {
+  max-width: min(95%, 140rem);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .bloques {
+    margin-top: 10rem;
+  }
+}
+.bloques__grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 1024px) {
+  .bloques__grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bloque {
+  padding: 2rem;
+  color: #FFFFFF;
+  border-radius: 1rem;
+}
+.bloque:nth-child(1) {
+  background-image: linear-gradient(to left top, #F97316, rgb(250.9205020921, 159.8117154812, 96.5794979079));
+}
+.bloque:nth-child(2) {
+  background-image: linear-gradient(to left top, #A855F7, rgb(205.3904494382, 158.0617977528, 250.4382022472));
+}
+.bloque:nth-child(3) {
+  background-image: linear-gradient(to left top, #65A30D, rgb(144.9005681818, 233.8494318182, 18.6505681818));
+}
+.bloque:nth-child(4) {
+  background-image: linear-gradient(to left top, #17769E, rgb(34.5856353591, 167.1132596685, 222.9143646409));
+}
+.bloque__heading {
+  margin: 1rem 0 2rem 0;
+  font-size: 3.5rem;
+}
+.bloque__texto {
+  margin: 1rem 0;
+}
+.bloque__texto--cantidad {
+  margin-top: 5rem;
+  font-weight: 900;
+  font-size: 6rem;
+  text-align: center;
+}
+
 .eventos-registro {
   max-width: min(95%, 140rem);
   margin: 0 auto;

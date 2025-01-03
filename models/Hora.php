@@ -8,10 +8,4 @@ class Hora extends ActiveRecord{
 
     public $id;
     public $hora;
-
-
-
-
-
-
 }

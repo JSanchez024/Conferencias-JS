@@ -11,11 +11,8 @@ class Regalo extends ActiveRecord{
 
    public function __construct($args = [])
    {
-        $this->id = $args['id'] ?? null;
-        $this->nombre = $args['nombre'] ?? '';
-        
+     $this->id = $args['id'] ?? null;
+     $this->nombre = $args['nombre'] ?? '';   
    }
     
-  
-
 }

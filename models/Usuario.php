@@ -19,7 +19,6 @@ class Usuario extends ActiveRecord {
     public $password_actual;
     public $password_nuevo;
 
-    
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;

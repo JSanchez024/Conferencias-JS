@@ -6,7 +6,6 @@ class Evento extends ActiveRecord{
     protected static $tabla = 'eventos';
     protected static $columnasDB = ['id', 'nombre', 'descripcion', 'categoria_id', 'dia_id', 'hora_id', 'disponibles', 'ponente_id'];
 
-
     public $id;
     public $nombre;
     public $descripcion;

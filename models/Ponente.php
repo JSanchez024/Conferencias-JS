@@ -15,7 +15,6 @@ class Ponente extends ActiveRecord{
     public $tags;
     public $redes;
 
-    
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;

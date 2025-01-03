@@ -8,10 +8,4 @@ class Dia extends ActiveRecord{
 
     public $id;
     public $nombre;
-
-
-
-
-
-
 }

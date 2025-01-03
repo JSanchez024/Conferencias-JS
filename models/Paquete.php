@@ -8,10 +8,4 @@ class Paquete extends ActiveRecord{
 
     public $id;
     public $nombre;
-
-
-
-
-
-
 }
