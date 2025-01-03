@@ -71,9 +71,33 @@ class PaginasController {
 
     public static function conferencias(Router $router) {
 
+        $eventos = Evento::order('hora_id', 'ASC');
+
+        $eventos_formateados = [];
+        foreach($eventos as $evento){
+            $evento->categoria = Categoria::find($evento->categoria_id);
+            $evento->dia = Dia::find($evento->dia_id);
+            $evento->hora = Hora::find($evento->hora_id);
+            $evento->ponente = Ponente::find($evento->ponente_id);
+
+            if($evento->dia_id === "5" && $evento->categoria_id === "5"){
+                $eventos_formateados['conferencias_v'][] = $evento;
+            }
+            if($evento->dia_id === "6" && $evento->categoria_id === "5"){
+                $eventos_formateados['conferencias_s'][] = $evento;
+            }
+            if($evento->dia_id === "5" && $evento->categoria_id === "6"){
+                $eventos_formateados['workshops_v'][] = $evento;
+            }
+            if($evento->dia_id === "6" && $evento->categoria_id === "6"){
+                $eventos_formateados['workshops_s'][] = $evento;
+            }
+        }
+
 
         $router->render('paginas/conferencias', [
-            'titulo' => 'conferencias & WorkShops'
+            'titulo' => 'conferencias & WorkShops',
+            'eventos' => $eventos_formateados
             
         ]);
     }

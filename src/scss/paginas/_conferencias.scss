@@ -61,19 +61,19 @@
     &__nombre{
         margin: 0;
         font-size: 2.5rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        display: inline;
+        //-webkit-line-clamp: 3;
+        //-webkit-box-orient: vertical;
+        //overflow: hidden;
  
-        height: 90px;
+        height: 60px;
     }
 
     &__introducion{
         font-size: 1.6rem;
-        display:  -webkit-box;
-        -webkit-line-clamp: 2;
+        display: -webkit-box;
         -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
         overflow: hidden;
     }
 
@@ -92,5 +92,15 @@
 
     &__autor-nombre{
         font-weight: v.$bold;
+    }
+
+    &__agregar{
+        @include m.boton(v.$blanco, v.$negro);
+        margin-top: 1rem;
+
+        &:disabled{
+            opacity: .5;
+            cursor: not-allowed;
+        }
     }
 }
